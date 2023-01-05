@@ -39,10 +39,14 @@ services:
     depends_on:
       - db
   notebook:
-    build: .
-    command: jupyter notebook
+    build:
+      context: .
+      dockerfile: DockerfileJupyter
+    command: jupyter notebook --allow-root
     ports:
       - "8888:8888"
+    volumes:
+      - .:/code
 
 networks:
     djangonetwork:

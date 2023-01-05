@@ -1,0 +1,9 @@
+FROM jupyter/scipy-notebook
+USER root
+RUN mkdir /code
+WORKDIR /code
+COPY requirements_jupyter.txt /code/requirements.txt
+RUN pip install -r requirements.txt
+
+COPY . /code/
+

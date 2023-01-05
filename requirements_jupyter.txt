@@ -1,0 +1,6 @@
+matplotlib
+numpy
+notebook
+pandas
+Django==2.2.27
+django-extensions==2.1.3
